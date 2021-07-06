@@ -1,0 +1,47 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    max-width: 1200px;
+    box-shadow:  1px 1px 7px;
+    font-family: 'Orbitron';
+}
+.table_box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+}
+.table_item{
+    display: flex;
+    justify-content:end;
+    width: 20%;
+    padding: 5px;
+    margin: 5px;
+}
+.button{
+    align-items: center;
+    margin: 5px;
+    width: 70px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px #000000;
+    background-color: rgba(255,255,255, 0.2);
+    font-family: 'Orbitron';
+    outline: none;
+    border: none;
+}
+.button:hover{
+    box-shadow:   1px 1px 4px  #545656;
+}
+.button:active{
+    box-shadow: inset 2px 1px 6px  #545656;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}

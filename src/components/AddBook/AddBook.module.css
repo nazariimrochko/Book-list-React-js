@@ -1,0 +1,66 @@
+.add_book_wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    font-family: 'Orbitron';
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 700px;
+}
+
+.form_label {
+    display: contents;
+    width: 150px;
+    height: 35px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.form_input {
+    display: block;
+    height: 32px;
+    margin: 5px;
+    padding: 5px;
+    border: inset 1px #5A5C5D;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Orbitron';
+    box-shadow: 1px 1px 4px #3C3D3E;
+    background-color: rgba(255,255,255, 0.2);
+}
+.form_input:focus {
+    border: inset 1px  #70D5FF;
+    background-color: rgba(151,224,255,0.2) ;
+    box-shadow:  0px 0px 3px #66afe9 ;
+}
+/*input:required {*/
+/*    outline: 0;*/
+/*    border: inset 1px #F73F45;*/
+/*    background-color: rgba(247,63,69,0.2) ;*/
+/*    box-shadow:  0px 0px 3px #F7131B ;*/
+/*}*/
+
+.button{
+    margin: 10px;
+    width: 140px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px #000000;
+    background-color: rgba(255,255,255, 0.2);
+    font-family: 'Orbitron';
+    outline: none;
+    border: none;
+}
+.button:hover{
+    box-shadow:   1px 1px 4px  #545656;
+}
+.button:active{
+    box-shadow: inset 2px 1px 6px  #545656;
+}

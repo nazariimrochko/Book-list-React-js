@@ -38,7 +38,7 @@ const BookItem = () => {
             <td className={s.table_item}> {book.author}</td>
             <td className={s.table_item}> {book.category}</td>
             <td className={s.table_item}> {book.isbn}</td>
-            <td className={s.table_item}>
+            <td className={`${s.table_item} ${s.btn}`}>
                 <button className={s.button}><NavLink to={`/edit/${book.id}`}>Edit</NavLink></button>
                 <button onClick={()=>deleteBook(book.id)} className={s.button}><NavLink to={`/dashboard`}>Delete</NavLink></button>
                 {/*<a onClick={()=>deleteBook(book.id)} className={s.button}> Delete</a>*/}

@@ -11,7 +11,7 @@
 }
 .title{
     align-items: center;
-    font-size: 22px;
+    font-size: 26px;
     padding: 5px;
 }
 .link a{
@@ -29,4 +29,21 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+@media all and (max-width:768px){
+    .title{
+        font-size: 22px;
+    }
+
+    .link a{
+        font-size: 20px;
+    }
+}
+@media all and (max-width:576px){
+    .title{
+        font-size: 18px;
+    }
+    .link a{
+        font-size: 16px;
+    }
 }

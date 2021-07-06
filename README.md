@@ -15,6 +15,8 @@ m i json-server
 
 - Start local server
 
+npm start
+
 json
 -server --watch db.json
 - d
@@ -22,4 +24,3 @@ b.json is Data Base imitation file
 
 - Start app
 
-npm start

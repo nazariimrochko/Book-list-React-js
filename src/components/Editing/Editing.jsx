@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import s from '../AddBook/AddBook.module.css'
 import InputField from "../AddBook/InputField";
 import {useHistory, useLocation} from "react-router-dom";
-import {getBookListById, putBookInBookList} from "../../api";
+import {getBookListById,correctionBook} from "../../api";
 import axios from "axios";
 
 const Editing = () => {
@@ -23,7 +23,7 @@ const Editing = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        putBookInBookList(bookId,editData)
+        correctionBook(bookId,editData)
             .then((response) => {
                 history.goBack();
                 alert('Your edit completed')

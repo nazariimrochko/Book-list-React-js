@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 import s from './Dashboard.module.css';
 import axios from "axios";
-import {deleteBookListById, getBookList} from "../../api";
+import {deleteBookById, getBookList} from "../../api";
 
 const BookItem = () => {
     const [booksList, setBooksList] = useState([]);
@@ -11,7 +11,7 @@ const BookItem = () => {
         // eslint-disable-next-line no-restricted-globals
        let  confirmation = confirm(`You deleted book - ${+id} - with list`)
         if(confirmation === true){
-            deleteBookListById(id)
+            deleteBookById(id)
                 .then((response) => {
                     getBookList()
                         .then((response) => {

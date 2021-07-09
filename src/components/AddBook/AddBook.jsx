@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import s from './AddBook.module.css'
 import InputField from "./InputField";
 import {useLocation, useHistory} from "react-router-dom";
-import {postBookList} from "../../api";
+import {createBook} from "../../api";
 
 
 const AddBook = () => {
@@ -12,7 +12,7 @@ const AddBook = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        postBookList(bookData)
+        createBook(bookData)
             .then((response) => {
                 history.goBack();
 

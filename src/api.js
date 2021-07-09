@@ -12,12 +12,12 @@ export const getBookList = () =>{
 export const getBookListById = (bookId) =>{
     return newAxios.get(`booksList/${bookId}`);
 }
-export const postBookList = (bookData,) =>{
+export const createBook = (bookData,) =>{
     return newAxios.post('booksList', bookData)
 }
-export const putBookInBookList = (bookId,editData) => {
+export const correctionBook = (bookId,editData) => {
     return axios.put(`booksList/${bookId}`, editData)
 }
-export const deleteBookListById = (id) => {
+export const deleteBookById = (id) => {
     return axios.delete(`booksList/`+id)
 }

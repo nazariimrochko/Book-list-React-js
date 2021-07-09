@@ -1,8 +1,8 @@
 .add_book_wrapper {
     display: flex;
-    height: 100vh;
     justify-content: center;
     font-family: 'Orbitron';
+
 }
 
 .form {

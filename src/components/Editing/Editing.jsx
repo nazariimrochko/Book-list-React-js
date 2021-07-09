@@ -35,7 +35,7 @@ const Editing = () => {
     };
     console.log(editData)
     return (
-        <div className={s.edit_book_wrapper}>
+        <div className={s.form_book_wrapper}>
             <h2 className={s.form_title}> Now you Editing your book</h2>
             <form onSubmit={handleSubmit} className={s.form}>
                 <InputField

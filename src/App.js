@@ -17,7 +17,7 @@ const App = (props) => {
                     </Route>
                     <Route path='/dashboard' render={() => <Dashboard />}/>
                     <Route path='/addBook' render={() => <AddBook/>}/>
-                    <Route path='/edit' render={() => <AddBook/>}/>
+                    <Route path='/edit' render={() => <Editing/>}/>
                 </Switch>
             </div>
         </div>

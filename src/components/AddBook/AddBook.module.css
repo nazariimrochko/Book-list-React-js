@@ -1,8 +1,9 @@
-.add_book_wrapper {
+.form_book_wrapper {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     font-family: 'Orbitron';
-
 }
 
 .form {
@@ -10,6 +11,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 750px;
+}
+.form_title{
+    color: #1983ED;
 }
 
 .form_label {

@@ -24,7 +24,7 @@ const AddBook = (props) => {
     console.log(location);
 
     return (
-        <div className={s.add_book_wrapper}>
+        <div className={s.form_book_wrapper}>
             <form onSubmit={handleSubmit} className={s.form}>
                 <InputField className={s.form_input}
                             label="Title book"

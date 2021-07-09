@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import s from '../AddBook/AddBook.module.css'
 import InputField from "../AddBook/InputField";
-import axios from "axios";
 import {useHistory, useLocation} from "react-router-dom";
+import {getBookListById, putBookInBookList} from "../../api";
+import axios from "axios";
 
 const Editing = () => {
 
@@ -13,9 +14,7 @@ const Editing = () => {
 
 
     useEffect(() => {
-
-        axios.get(`booksList/${bookId}`)
-            .then((response) => {
+        getBookListById(bookId).then((response) => {
                 setEditData(response.data)
             }).catch((error) => {
         })
@@ -24,7 +23,7 @@ const Editing = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        axios.put(`booksList/${bookId}`, editData)
+        putBookInBookList(bookId,editData)
             .then((response) => {
                 history.goBack();
                 alert('Your edit completed')
@@ -54,8 +53,8 @@ const Editing = () => {
                 />
                 <label className={s.form_label}>Category</label>
                 <select className={`${s.form_input} ${s.select}`}
-                        id={editData.category}
                         name='category'
+                        value={editData.category}
                         onChange={e => setEditData({...editData, category: e.target.value})}
                         required>
                     <option></option>

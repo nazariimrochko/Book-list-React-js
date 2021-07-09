@@ -1,36 +1,38 @@
 import React, {useEffect, useState} from "react";
-import {NavLink,} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import s from './Dashboard.module.css';
-import axios from "../../api";
+import axios from "axios";
+import {deleteBookListById, getBookList} from "../../api";
 
 const BookItem = () => {
     const [booksList, setBooksList] = useState([]);
 
     const deleteBook =(id) => {
-        alert(`You deleted book - ${+id} - with list`)
-        axios.delete(`booksList/`+id)
-            .then((response) => {
-                axios.get('booksList')
-                    .then((response) => {
-                        setBooksList(response.data)
-                    })
-            }).catch((error) => {
+        // eslint-disable-next-line no-restricted-globals
+       let  confirmation = confirm(`You deleted book - ${+id} - with list`)
+        if(confirmation === true){
+            deleteBookListById(id)
+                .then((response) => {
+                    getBookList()
+                        .then((response) => {
+                            setBooksList(response.data)
+                        })
+                }).catch((error) => {
                 alert("Error")
-            console.log(error);
-        })
+            })
+        }else{
+            alert('You are not delete this book')
+        }
     };
 
     useEffect(() => {
-        axios.get('booksList')
+        getBookList()
             .then((response) => {
                 setBooksList(response.data)
 
             }).catch((error) => {
-            console.log(error);
         })
     }, []);
-
-
 
     const data = booksList.map(book =>
         <tr key={book.id} className={s.table_box}>

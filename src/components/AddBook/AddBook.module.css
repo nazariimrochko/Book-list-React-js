@@ -82,6 +82,9 @@
         height: 30px;
         font-size: 16px;
     }
+    .select{
+        height:44px;
+    }
 }
 
 @media all and (max-width:576px){
@@ -96,6 +99,9 @@
     .form_input {
         height: 28px;
         font-size: 16px;
+    }
+    .select{
+        height:44px;
     }
 }
 

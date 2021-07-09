@@ -12,12 +12,10 @@ const App = (props) => {
             <Header/>
             <div className="content-box">
                 <Switch>
-                    <Route exact path="/">
-                         <Redirect to="/dashboard" /> : <Dashboard />
-                    </Route>
                     <Route path='/dashboard' render={() => <Dashboard />}/>
                     <Route path='/addBook' render={() => <AddBook/>}/>
                     <Route path='/edit' render={() => <Editing/>}/>
+                    <Redirect to="/dashboard"  render={() => <Dashboard />} />
                 </Switch>
             </div>
         </div>

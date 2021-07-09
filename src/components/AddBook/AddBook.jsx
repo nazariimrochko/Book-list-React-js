@@ -1,19 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import s from './AddBook.module.css'
 import InputField from "./InputField";
-import axios from "axios";
 import {useLocation, useHistory} from "react-router-dom";
+import {postBookList} from "../../api";
 
 
-const AddBook = (props) => {
+const AddBook = () => {
     const [bookData, setBookData] = useState({});
     let location = useLocation();
     let history = useHistory();
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(bookData);
-        axios.post('booksList', bookData)
+        postBookList(bookData)
             .then((response) => {
                 history.goBack();
 
@@ -43,8 +42,7 @@ const AddBook = (props) => {
                         name='category'
                         onChange={e => setBookData({...bookData, category: e.target.value})}
                         required>
-                    <option></option>
-                    <option value="crime">Crime</option>
+                    <option value='none'></option>
                     <option value="detective">Detective fiction</option>
                     <option value="science">Science fiction</option>
                     <option value="fantasy">Fantasy</option>

@@ -37,20 +37,29 @@ const AddBook = (props) => {
                             type="text"
                             value={bookData.author}
                             onChange={e => setBookData({...bookData, author: e.target.value})}/>
-
-                <InputField className={s.form_input}
-                            label="Category"
-                            type="text"
-                            value={bookData.category}
-                            onChange={e => setBookData({...bookData, category: e.target.value})}/>
-
+                <label className={s.form_label}>Category</label>
+                <select className={`${s.form_input} ${s.select}`}
+                        id={bookData.category}
+                        name='category'
+                        onChange={e => setBookData({...bookData, category: e.target.value})}
+                        required>
+                    <option></option>
+                    <option value="crime">Crime</option>
+                    <option value="detective">Detective fiction</option>
+                    <option value="science">Science fiction</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="romance">Romance novel</option>
+                    <option value="horror">Horror</option>
+                    <option value="classic">Classic</option>
+                    <option value="fairy tale">Fairy tale</option>
+                </select>
                 <InputField className={s.form_input}
                             label="ISBN"
                             type="number"
                             value={bookData.isbn}
                             onChange={e => setBookData({...bookData, isbn: e.target.value})}/>
 
-                <button  className={s.button}> Add Book</button>
+                <button className={s.button}> Add Book</button>
             </form>
         </div>
     );

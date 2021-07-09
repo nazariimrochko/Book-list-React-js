@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    max-width: 1400px;
+    width: 1200px;
     box-shadow:  1px 1px 7px;
     font-family: 'Orbitron';
 }
@@ -10,7 +10,7 @@
     display: flex;
     justify-content:end;
     width: 20%;
-    padding: 10px;
+    padding: 7px;
     margin: 5px;
     color: #1983ED;
 }
@@ -23,6 +23,7 @@
 }
 .table_item{
     display: flex;
+    flex-wrap: wrap;
     justify-content:end;
     width: 20%;
     padding: 10px;
@@ -43,8 +44,10 @@
     border: none;
 }
 .button:hover{
-    border: solid 1px #000000;
     box-shadow:   1px 1px 4px  #1983ED;
+}
+.red:hover{
+    box-shadow:   1px 1px 4px  #FF1818;
 }
 .button:active{
     box-shadow: inset 2px 1px 6px  #545656;

@@ -40,8 +40,7 @@ const BookItem = () => {
             <td className={s.table_item}> {book.isbn}</td>
             <td className={`${s.table_item} ${s.btn}`}>
                 <button className={s.button}><NavLink to={`/edit/${book.id}`}>Edit</NavLink></button>
-                <button onClick={()=>deleteBook(book.id)} className={s.button}><NavLink to={`/dashboard`}>Delete</NavLink></button>
-                {/*<a onClick={()=>deleteBook(book.id)} className={s.button}> Delete</a>*/}
+                <button onClick={()=>deleteBook(book.id)} className={`${s.button} ${s.red}`}><NavLink to={`/dashboard`}>Delete</NavLink></button>
             </td>
         </tr>
     );

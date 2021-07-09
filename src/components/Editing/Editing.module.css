@@ -21,6 +21,7 @@
     font-size: 20px;
     color: #1983ED;
 }
+
 .form_title{
     color: #1983ED;
 }
@@ -37,6 +38,9 @@
     font-family: 'Orbitron';
     box-shadow: 1px 1px 4px #3C3D3E;
     background-color: rgba(255,255,255, 0.2);
+}
+.select{
+    height:44px;
 }
 .form_input:focus {
     outline: 0;

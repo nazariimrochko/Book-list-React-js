@@ -32,6 +32,9 @@
     box-shadow: 1px 1px 4px #3C3D3E;
     background-color: rgba(255,255,255, 0.2);
 }
+.select{
+    height:44px;
+}
 .form_input:focus {
     border: inset 1px  #70D5FF;
     background-color: rgba(151,224,255,0.2) ;
